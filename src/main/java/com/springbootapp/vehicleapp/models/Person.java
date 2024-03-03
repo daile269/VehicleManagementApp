@@ -22,7 +22,7 @@ public class Person {
     private String firstname;
     private String lastname;
 
-    @Formula(value = "concat(firstname,'',lastname)")
+    @Formula(value = "concat(firstname,' ',lastname)")
     private String fullName;
 
     private String title;
