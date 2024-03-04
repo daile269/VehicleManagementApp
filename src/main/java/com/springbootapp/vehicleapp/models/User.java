@@ -1,11 +1,14 @@
 package com.springbootapp.vehicleapp.models;
 
+import com.springbootapp.vehicleapp.security.models.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 
@@ -26,13 +29,13 @@ public class User {
     private String username;
     private String password;
 
-  /*  @ManyToMany(cascade = {CascadeType.ALL},fetch = FetchType.EAGER)
+    @ManyToMany(cascade = {CascadeType.ALL},fetch = FetchType.EAGER)
             @JoinTable(
                     name = "user_role",
                     joinColumns = {@JoinColumn(name = "user_id")},
                     inverseJoinColumns = {@JoinColumn(name = "role_id")}
             )
-    Set<Role> roles = new HashSet<>();*/
+    List<Role> roles = new ArrayList<>();
 
 
 

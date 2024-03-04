@@ -5,10 +5,11 @@ $('document').ready(function (){
         var href = $(this).attr('href');
         $.get(href,function (item,status){
             $('#edit_id').val(item.id);
-            $('#edit_description').val(item.description);
-            $('#edit_details').val(item.details);
-            $('#createdBy').val(item.createdBy);
-            $('#createdDate').val(item.createdDate.substr(0,10).replace("T", " "));
+            $('#edit_firstname').val(item.firstname);
+            $('#edit_lastname').val(item.lastname);
+            $('#edit_username').val(item.username);
+            $('#edit_password').val(item.password);
+
         })
 
           $('#editModal').modal();
@@ -18,12 +19,10 @@ $('document').ready(function (){
         var href= $(this).attr('href');
         $.get(href, function(item, status){
             $('#idDetails').val(item.id);
-            $('#descriptionDetails').val(item.description);
-            $('#detailsDetails').val(item.details);
-            $('#lastModifiedByDetails').val(item.lastModifiedBy);
-            $('#lastModifiedDateDetails').val(item.lastModifiedDate.substr(0,19).replace("T", " "));
-            $('#createdByDetails').val(item.createdBy);
-            $('#createdDateDetails').val(item.createdDate.substr(0,19).replace("T", " "));
+            $('#firstnameDetails').val(item.firstname);
+            $('#lastnameDetails').val(item.lastname);
+            $('#usernameDetails').val(item.username);
+            $('#passwordDetails').val(item.password);
         });
         $('#detailsModal').modal();
     });

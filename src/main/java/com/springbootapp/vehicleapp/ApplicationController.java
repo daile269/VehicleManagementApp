@@ -27,6 +27,11 @@ public class ApplicationController {
         return "register";
     }
 
+    @RequestMapping("/accessDenied")
+    public String accessDenied(){
+        return "accessDenied";
+    }
+
 
 
 }

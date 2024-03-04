@@ -21,8 +21,8 @@ public class UserService {
     public List<User> getUsers(){
         return userRepository.findAll();
     }
-    public Optional<User> getUserById(Long id){
-        return userRepository.findById(id);
+    public User findUserById(Long id){
+        return userRepository.findById(id).orElse(null);
     }
     public void saveUser(User user){
         user.setPassword(encoder.encode(user.getPassword()));

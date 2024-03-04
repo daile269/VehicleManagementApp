@@ -7,7 +7,8 @@ $('document').ready(function (){
             $('#edit_id').val(item.id);
             $('#edit_description').val(item.description);
             $('#edit_details').val(item.details);
-
+            $('#createdBy').val(item.createdBy);
+            $('#createdDate').val(item.createdDate.substr(0,10).replace("T", " "));
         })
 
           $('#editModal').modal();
